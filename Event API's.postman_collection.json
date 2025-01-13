@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "da2d7114-9b3f-4d28-bea2-66ee6648cd1b",
+		"name": "Event API's",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33667697"
+	},
+	"item": [
+		{
+			"name": "Add new event",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Tulsi Pujari",
+							"type": "text"
+						},
+						{
+							"key": "tagline",
+							"value": "A sample",
+							"type": "text"
+						},
+						{
+							"key": "schedule",
+							"value": "2023-06-15T14:00:00Z",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "This is a sample",
+							"type": "text"
+						},
+						{
+							"key": "moderator",
+							"value": "Riya potham",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "Technology",
+							"type": "text"
+						},
+						{
+							"key": "sub_category",
+							"value": "AI",
+							"type": "text"
+						},
+						{
+							"key": "rigor_rank",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "uid",
+							"value": "18",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/tulsi pujari/OneDrive/Documents/Pictures/Screenshot 2024-06-09 205548[2].png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v3/app/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v3",
+						"app",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get details of event by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v3/app/events?id=6783fb833477e5f50dd488bc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v3",
+						"app",
+						"events"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "6783fb833477e5f50dd488bc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get the events data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v3/app/events?type=latest&limit=5&page=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v3",
+						"app",
+						"events"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "latest"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update event",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Delete event",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v3/app/events/678373e667b89cd60818c06a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v3",
+						"app",
+						"events",
+						"678373e667b89cd60818c06a"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
